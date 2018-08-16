@@ -153,7 +153,7 @@ namespace SwitchTasks
             do
             {
                 int x, y, result = 0;
-                String choice;
+                String @operator;
                 Console.Clear();
 
                 Console.WriteLine("Calculator");
@@ -162,13 +162,13 @@ namespace SwitchTasks
                 x = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Operator to enter: +, -, *, /");
-                choice = Console.ReadLine();
+                @operator = Console.ReadLine();
 
                 
                 Console.WriteLine("\nEnter Second Number:");
                 y = Convert.ToInt32(Console.ReadLine());
 
-                switch (choice)
+                switch (@operator)
                 {
                     case "+":
                         result = x + y;
@@ -190,7 +190,7 @@ namespace SwitchTasks
                         Console.WriteLine("Error, please try again...");
                         break;
                 }
-                Console.Write("{0} {1} {2} = {3}", x, choice, y, result);
+                Console.Write("{0} {1} {2} = {3}", x, @operator, y, result);
                 
                 Console.WriteLine("\nDo You Wish To Calculate Again? Y/N");
                 var check = Console.ReadLine().ToUpper();
